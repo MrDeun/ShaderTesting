@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://rvv6cqoqh8vr"]
+
+[ext_resource type="Shader" path="res://basic_shade.gdshader" id="1_8o4yl"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_801yk"]
+size = Vector2(50, 50)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qe62y"]
+render_priority = 0
+shader = ExtResource("1_8o4yl")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="."]
+mesh = SubResource("PlaneMesh_801yk")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0462295, 1.30924, -0.18341)
+material = SubResource("ShaderMaterial_qe62y")
